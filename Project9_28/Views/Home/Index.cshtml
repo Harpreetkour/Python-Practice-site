@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Python Autochecker";
+}
+
+<div class="jumbotron">
+    <h1>Python Practice Site</h1>
+	<p class="lead">Welcome Python Lovers!!!  This Webapplication has been built to help students to get their programs in assignments working</p>
+    <p><a href="https://www.python.org/" class="btn btn-primary btn-lg">Learn Python &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Professor</h2>
+        <p>
+			Upload assignment statements, test cases, small descriptions  for assignments
+        </p>
+        <p>@Html.ActionLink("Signin", "Index", "Faculty","", new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Student</h2>
+        <p>Upload programming solutions</p>
+
+		<p>@Html.ActionLink("Start Practice", "Index", "Student", "",new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Admin</h2>
+        <p>Edit and control the Python Checker </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Signin</a></p>
+    </div>
+</div>

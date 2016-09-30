@@ -1,0 +1,22 @@
+﻿@model string
+
+
+<h2>Code Area</h2>
+<div style="float:left">
+@using (Html.BeginForm("AddNewCourse", "Faculty", FormMethod.Post))
+{
+	@Html.ValidationSummary(true)
+	<fieldset>
+	@Html.TextArea("Code", new {@cols="79" , @rows="20",placeholder="Enter or paste your code here..." })<p></p>
+		<p>
+			<input type="submit" value="Run" />
+			<button id="clear">Clear</button>
+		</p>
+	</fieldset>
+}
+	</div>
+<div style="float:right">
+@Html.TextArea("ResultArea",@Model, new { @cols = "77", @rows = "20", disabled = "disabled", placeholder = "Result" })
+	<p></p><p></p><p></p>
+	</div>
+

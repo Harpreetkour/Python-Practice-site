@@ -1,0 +1,60 @@
+﻿
+@model Project9_28.Models.Professor
+
+@Scripts.Render("~/bundles/jquery")
+
+<h2>Add New Question</h2>
+<div id="informationform" style="display:none">
+@using (Html.BeginForm())
+{
+	@Html.ValidationSummary(true)
+	<fieldset>
+
+		<p>
+			@Html.Label("NAME: ")
+		@Html.TextBoxFor(model => model.name)
+	    </p><p>
+	@Html.Label("E-MAIL: ")
+	@Html.TextBoxFor(model => model.email)
+</p><p>
+	@Html.Label("PASSWORD: ")
+	@Html.TextBoxFor(model => model.password)
+</p><p>
+	@Html.Label("CONFIRM PASSWORD: ")
+	@Html.TextBoxFor(model => model.password)
+</p>
+		<p><input type="submit" value="Save Changes" />
+		<p>
+		<button id="Cancel">Cancel</button></p>
+</fieldset>
+}
+</div>
+		<fieldset id="informationlabels">
+			<p>
+				@Html.Label("NAME: ")
+				@Html.LabelFor(model => model.name)  @*Convert labelfor to label*@ 
+			</p><p>
+	@Html.Label("E-MAIL: ")
+	@Html.LabelFor(model => model.email)
+			</p><p>
+	@Html.Label("PASSWORD: ")
+	@Html.LabelFor(model => model.password)
+			</p><p>
+
+	<button id="Edit">Edit Profile</button>
+</p>
+</fieldset>
+<script type="text/javascript">
+
+	$("#Edit").click(function () {
+		$("#informationform").toggle();
+
+		$("#informationlabels").toggle();
+	});
+	$("#Cancel").click(function () {
+		$("#informationform").toggle();
+
+		$("#informationlabels").toggle();
+	});
+	</script>
+

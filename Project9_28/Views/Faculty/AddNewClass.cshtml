@@ -1,0 +1,25 @@
+﻿@model Project9_28.Models.Course
+
+
+<h2>Add New Question</h2>
+
+@using (Html.BeginForm("AddNewCourse", "Faculty", FormMethod.Post))
+{
+	@Html.ValidationSummary(true)
+	<fieldset>
+
+		<p>
+			@Html.Label("Course Name: ")
+			@Html.TextBoxFor(model => model.coursename)
+		</p>
+		<p>
+			@Html.Label("Course Number: ")
+			@Html.TextBoxFor(model => model.course_number)
+		</p>
+		<p>
+			@Html.Label("Student Access ID: ")
+			@Html.TextBoxFor(model => model.student_access_id)
+		</p>
+		<p>	<input type="submit" value="Save" /></p>
+</fieldset>
+}

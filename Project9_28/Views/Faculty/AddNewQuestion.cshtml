@@ -1,0 +1,19 @@
+﻿@model Project9_28.Models.Question
+@{
+    ViewBag.Title = "AddNewQuestion";
+}
+
+<h2>Add New Question</h2>
+
+@using (Html.BeginForm("AddNewQuestion", "Faculty", FormMethod.Post))
+{
+	@Html.ValidationSummary(true)
+	<fieldset>
+
+		@Html.Label("Question Statement")
+		@Html.TextBoxFor(model=>model.question_statement)
+		
+		<input type="submit" value="Save" />
+	</fieldset>
+}
+
